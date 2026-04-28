@@ -1,71 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { heroData } from '../data';
-
-const AnimatedRole = ({ text }) => {
-    const [key, setKey] = useState(0);
-
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setKey(prev => prev + 1);
-        }, text.length * 50 + 5000);
-        return () => clearInterval(timer);
-    }, [text]);
-
-    return (
-        <span key={key} style={{ display: 'inline-block' }}>
-            {text.split('').map((char, index) => (
-                <span
-                    key={index}
-                    className="animate-letter"
-                    style={{
-                        animationDelay: `${index * 0.05}s`,
-                        display: 'inline-block',
-                        whiteSpace: 'pre'
-                    }}
-                >
-                    {char}
-                </span>
-            ))}
-        </span>
-    );
-};
 
 const Hero = () => {
     return (
-        <section id="hero" className="section-padding hero-section">
-            <div className="container hero-content">
-                <div className="text-content fade-in">
-                    <p className="greeting">Hello, I'm</p>
-                    <h1 className="name text-gradient">{heroData.name}</h1>
-                    <h2 className="role"><AnimatedRole text={heroData.role} /></h2>
-                    <p className="intro">{heroData.intro}</p>
-
-                    <div className="cta-group">
-                        <a href={heroData.resumeLink} className="btn-primary" download>
-                            Download Resume
-                        </a>
-                        <a href="#contact" className="btn-outline">
-                            Contact Me
-                        </a>
+        <section id="hero" className="min-vh-100 d-flex align-items-center hero-bg">
+            <div className="container">
+                <div className="row align-items-center gy-5">
+                    <div className="col-lg-7 order-2 order-lg-1">
+                        <p className="text-uppercase ls-wide text-muted mb-2" style={{ letterSpacing: '3px', fontSize: '0.85rem' }}>Hello, I'm</p>
+                        <h1 className="display-2 fw-800 hero-name mb-2">{heroData.name}</h1>
+                        <h2 className="fs-4 fw-normal text-secondary mb-3">{heroData.role}</h2>
+                        <p className="lead text-muted mb-4" style={{ maxWidth: '520px' }}>{heroData.intro}</p>
+                        <div className="d-flex gap-3 flex-wrap">
+                            <a href={heroData.resumeLink} className="btn btn-primary btn-lg px-4 rounded-pill" download>
+                                <i className="bi bi-download me-2"></i>Download Resume
+                            </a>
+                            <a href="#contact" className="btn btn-outline-secondary btn-lg px-4 rounded-pill">
+                                Contact Me
+                            </a>
+                        </div>
                     </div>
-                </div>
-
-                <div className="visual-content fade-in">
-                    <div className="circle-glow"></div>
-                    <div className="hero-profile-container">
-                        <div className="tech-ring"></div>
-                        <img
-                            src="/logo.jpeg"
-                            alt={heroData.name}
-                            className="hero-profile-img"
-                            onError={(e) => {
-                                if (e.target.src.includes('profile.png')) {
-                                    e.target.src = "/profile.jpg";
-                                } else {
-                                    e.target.src = "https://ui-avatars.com/api/?name=" + heroData.name + "&background=0D8ABC&color=fff";
-                                }
-                            }}
-                        />
+                    <div className="col-lg-5 order-1 order-lg-2 text-center">
+                        <div className="profile-wrapper mx-auto">
+                            <img
+                                src="/logo.jpeg"
+                                alt={heroData.name}
+                                className="profile-img rounded-circle"
+                                onError={(e) => {
+                                    e.target.src = `https://ui-avatars.com/api/?name=${heroData.name}&background=6c5ce7&color=fff&size=256`;
+                                }}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

@@ -9,12 +9,10 @@ import About from './components/About';
 import Contact from './components/Contact';
 import WhatsAppButton from './components/WhatsAppButton';
 import ScrollButtons from './components/ScrollButtons';
-import GmailButton from './components/GmailButton';
 
 function App() {
   return (
-    <div className="App">
-      <div className="bg-animation"></div>
+    <>
       <Navbar />
       <main>
         <Hero />
@@ -26,9 +24,8 @@ function App() {
         <Contact />
       </main>
       <WhatsAppButton />
-      <GmailButton />
       <ScrollButtons />
-    </div>
+    </>
   );
 }
 

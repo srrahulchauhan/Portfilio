@@ -56,10 +56,10 @@ export const projectsData = [
 export const experienceData = [
     {
         id: 1,
-        role: "Frontend Intern",
-        company: "XYZ Company",
-        period: "3 Months",
-        desc: "Worked on UI components and fixed bugs in the main product dashboard."
+        role: "Fresher",
+        company: "Open to Opportunities",
+        period: "2024 - Present",
+        desc: "Passionate Frontend Developer looking for opportunities. Built multiple projects using React, Firebase, and modern web technologies."
     }
 ];
 
@@ -68,7 +68,7 @@ export const educationData = [
         id: 1,
         degree: "BSC Computer Science",
         institute: "VBSPU University",
-        year: "2024"
+        year: "2023"
     }
 ];
 
