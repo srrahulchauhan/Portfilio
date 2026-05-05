@@ -233,7 +233,7 @@ const Hero = () => {
                     >
                         <div className="profile-img-container">
                             <img
-                                src="/logo.jpeg"
+                                src="/profile pic.png"
                                 alt={heroData.name}
                                 className="profile-img"
                                 onError={(e) => {
