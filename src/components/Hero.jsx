@@ -122,11 +122,11 @@ const Hero = () => {
                                 hidden: { opacity: 0, y: 20 },
                                 visible: { opacity: 1, y: 0 }
                             }}
-                            className="d-flex gap-4 flex-wrap"
+                            className="d-flex gap-2 gap-sm-4 flex-nowrap"
                         >
                             <motion.a 
                                 href={heroData.resumeLink} 
-                                className="btn btn-primary btn-lg px-5 rounded-pill shadow-lg d-flex align-items-center gap-2 fw-bold"
+                                className="btn btn-primary btn-lg px-3 px-sm-5 rounded-pill shadow-lg d-flex align-items-center justify-content-center gap-2 fw-bold"
                                 style={{ 
                                     background: 'linear-gradient(135deg, var(--primary), var(--secondary))',
                                     border: 'none'
@@ -143,7 +143,7 @@ const Hero = () => {
                                     animate={isContactHovered ? "open" : "closed"}
                                 >
                                     <motion.button 
-                                        className="btn btn-lg px-5 rounded-pill d-flex align-items-center gap-2 shadow-lg fw-bold"
+                                        className="btn btn-lg px-3 px-sm-5 rounded-pill d-flex align-items-center justify-content-center gap-2 shadow-lg fw-bold"
                                         style={{ 
                                             minHeight: '58px',
                                             background: 'rgba(255, 255, 255, 0.05)',
