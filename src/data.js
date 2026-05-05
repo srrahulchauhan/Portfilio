@@ -1,18 +1,40 @@
 export const heroData = {
     name: "Rahul",
-    role: "Frontend Developer / React Developer",
-    intro: "I’m Rahul, a Frontend Developer who builds fast, responsive & user-friendly web apps.",
+    role: "MERN Full Stack Developer",
+    intro: "I’m Rahul, a MERN Full Stack Developer building robust, scalable & user-friendly web applications.",
     resumeLink: "#resume", // Placeholder
 };
 
-export const skillsData = [
-    { name: "HTML5", level: 90 },
-    { name: "CSS3 (Flexbox, Grid)", level: 85 },
-    { name: "JavaScript (ES6+)", level: 80 },
-    { name: "React.js", level: 85 },
-    { name: "Bootstrap 5", level: 75 },
-    { name: "Git & GitHub", level: 70 },
-];
+export const skillsData = {
+    frontend: [
+        { name: "React.js", level: 90 },
+        { name: "JavaScript", level: 85 },
+        { name: "HTML5", level: 95 },
+        { name: "CSS5", level: 90 },
+        { name: "Tailwind", level: 85 }
+    ],
+    backend: [
+        { name: "Node.js", level: 80 },
+        { name: "Express.js", level: 80 },
+        { name: "MongoDB", level: 75 },
+        { name: "Firebase", level: 70 }
+    ],
+    tools: [
+        { name: "Git & GitHub", level: 80 },
+        { name: "VS Code", level: 90 },
+        { name: "Postman", level: 85 },
+        { name: "Vite", level: 85 }
+    ],
+    additional: [
+        { name: "Ms Word", level: 90 },
+        { name: "Ms Excel", level: 85 },
+        { name: "PowerPoint", level: 85 },
+        { name: "Canva", level: 80 },
+        { name: "Figma", level: 75 },
+        { name: "Google Sheets", level: 85 },
+        { name: "Google Docs", level: 90 }
+    ]
+};
 
 export const projectsData = [
     {
@@ -56,10 +78,10 @@ export const projectsData = [
 export const experienceData = [
     {
         id: 1,
-        role: "Fresher",
-        company: "Open to Opportunities",
-        period: "2024 - Present",
-        desc: "Passionate Frontend Developer looking for opportunities. Built multiple projects using React, Firebase, and modern web technologies."
+        role: "MERN Stack Developer (Trainee)",
+        company: "Self-Employed / Freelance",
+        period: "2025 - Present",
+        desc: "Developing full-stack applications using MongoDB, Express, React, and Node.js. Focused on building RESTful APIs and responsive frontends."
     }
 ];
 
@@ -76,5 +98,6 @@ export const socialData = {
     github: "https://github.com/rc09314/",
     linkedin: "https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin",
     twitter: "https://twitter.com/",
-    email: "rc093140@gmail.com"
+    email: "rc093140@gmail.com",
+    phone: "8429576042"
 };

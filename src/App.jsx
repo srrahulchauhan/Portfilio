@@ -1,31 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Experience from './components/Experience';
-import Education from './components/Education';
-import About from './components/About';
-import Contact from './components/Contact';
-import WhatsAppButton from './components/WhatsAppButton';
+import FloatingContact from './components/FloatingContact';
 import ScrollButtons from './components/ScrollButtons';
+import AnimatedBackground from './components/AnimatedBackground';
+import Home from './pages/Home';
 
 function App() {
+  const [activeSection, setActiveSection] = useState('hero');
+
   return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Education />
-        <About />
-        <Contact />
-      </main>
-      <WhatsAppButton />
+    <Router>
+      <AnimatedBackground activeSection={activeSection} />
+      <Navbar activeSection={activeSection} />
+      
+      <Routes>
+        <Route path="/" element={<Home setActiveSection={setActiveSection} />} />
+        {/* Add more routes here as needed, e.g. <Route path="/project/:id" element={<ProjectDetails />} /> */}
+      </Routes>
+
+      <FloatingContact />
       <ScrollButtons />
-    </>
+    </Router>
   );
 }
 
