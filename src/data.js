@@ -39,11 +39,11 @@ export const skillsData = {
 export const projectsData = [
     {
         id: 1,
-        title: "Movies Responsive Site",
-        description: "A fully responsive movie application presenting latest trends and search functionality.",
+        title: "ProjectHub",
+        description: "A fully responsive platform to showcase, manage, and explore software projects.",
         tech: ["React", "Tailwind", "API"],
-        image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=600&q=80",
-        demo: "https://jade-torte-7af7d3.netlify.app/",
+        image: "/projecthub.png",
+        demo: "https://project-hub-six-alpha.vercel.app/",
         github: "#"
     },
     {
