@@ -48,11 +48,11 @@ export const projectsData = [
     },
     {
         id: 2,
-        title: "Student Management System",
-        description: "Comprehensive system to manage student records, grades, and attendance seamlessly.",
+        title: "Acountant System",
+        description: "Comprehensive system to manage financial records, transactions, and accounts seamlessly.",
         tech: ["React", "Firebase", "CSS"],
         image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80",
-        demo: "#",
+        demo: "https://acountant-xi.vercel.app/login",
         github: "#"
     },
     {
